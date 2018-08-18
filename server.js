@@ -77,7 +77,7 @@ app.get("/twitter", (req, response) => {
 app.use(express.static(__dirname + "/dist"));
 app.use((req, res) => res.sendFile(`${__dirname}/dist/index.html`));
 
-app.listen(process.env.PORT || 8080);
+app.listen(process.env.PORT || 8083);
 
 console.log("running on port 8080");
 
