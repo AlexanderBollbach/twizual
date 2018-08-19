@@ -6,6 +6,12 @@ import { Provider } from "react-redux";
 import configureStore from "Redux/configureStore";
 import TwitterViz from "./TwitterViz";
 
+import { fetchTweetsWithUrl } from "./Api";
+
+fetchTweetsWithUrl("./twitter");
+fetchTweetsWithUrl("/twitter");
+fetchTweetsWithUrl("twitter");
+
 let theme = {
   primary: {
     fgColor: "#ff1122",

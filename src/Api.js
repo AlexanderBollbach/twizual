@@ -3,9 +3,28 @@ import Axios from "axios";
 export const fetchTweets = name => {
   return new Promise((resolve, reject) => {
     Axios({
-      url: "./twitter",
+      url: "/twitter",
       params: {
         screen_name: name
+      }
+    }).then(res => {
+      const { data } = res;
+
+      if (data.error) {
+        reject(data.error);
+      } else {
+        resolve(data);
+      }
+    });
+  });
+};
+
+export const fetchTweetsWithUrl = url => {
+  return new Promise((resolve, reject) => {
+    Axios({
+      url: url,
+      params: {
+        screen_name: "a"
       }
     }).then(res => {
       const { data } = res;
