@@ -3,7 +3,7 @@ import Axios from "axios";
 export const fetchTweets = name => {
   return new Promise((resolve, reject) => {
     Axios({
-      url: "/twitter",
+      url: "./twitter",
       params: {
         screen_name: name
       }
