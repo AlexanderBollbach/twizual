@@ -47269,7 +47269,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var fetchTweets = exports.fetchTweets = function fetchTweets(name) {
   return new Promise(function (resolve, reject) {
     (0, _axios2.default)({
-      url: "/twitter",
+      url: "./twitter",
       params: {
         screen_name: name
       }

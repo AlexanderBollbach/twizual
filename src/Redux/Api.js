@@ -10,7 +10,7 @@ export const fetchTweets = (name, startingFrom) => {
       params.max_id = startingFrom;
     }
     Axios({
-      url: "/twitter",
+      url: "twitter",
       params: params
     }).then(res => {
       const { data } = res;
